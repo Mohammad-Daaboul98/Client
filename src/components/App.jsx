@@ -30,7 +30,7 @@ function App() {
 
 
     setNotes(prevNotes => {
-      return [...prevNotes];
+      return [...prevNotes,newNote];
     });
   }
 
@@ -38,7 +38,7 @@ function App() {
 
     Axios.delete(`https://my-note-app-98.herokuapp.com/api/delete/${id}`);
    setNotes(prevNotes => {
-      return [...prevNotes, newNote];
+      return [...prevNotes];
     });
   }
 
