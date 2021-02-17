@@ -15,14 +15,14 @@ function App() {
 
 
   useEffect(() => {
-    Axios.get("https://my-note-app-98.herokuapp.com//api/get").then((result) => {
+    Axios.get("https://my-note-app-98.herokuapp.com/api/get").then((result) => {
       setNotes(result.data)
     })
   }, []);
 
   function addNote(newNote) {
 
-    Axios.post("https://my-note-app-98.herokuapp.com//api/insert", {
+    Axios.post("https://my-note-app-98.herokuapp.com/api/insert", {
       title: newNote.title,
       content: newNote.content
     }).then("Susccessful insert");
@@ -36,7 +36,7 @@ function App() {
 
   function deleteNote(id) {
 
-    Axios.delete(`https://my-note-app-98.herokuapp.com//api/delete/${id}`);
+    Axios.delete(`https://my-note-app-98.herokuapp.com/api/delete/${id}`);
     // setNotes(prevNotes => {
     //   return prevNotes.filter((noteItem, index) => {
     //     return index !== Id;
