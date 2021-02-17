@@ -4,7 +4,7 @@
   "description": "",
   "keywords": [],
   "homepage": "./",
-  "main": "src/index.js",
+  "main": "src/components/App.jsx",
   "dependencies": {
     "@material-ui/core": "4.6.1",
     "@material-ui/icons": "4.5.1",
