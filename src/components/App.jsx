@@ -30,7 +30,7 @@ function App() {
 
 
     setNotes(prevNotes => {
-      return [...prevNotes, newNote];
+      return [...prevNotes];
     });
   }
 
