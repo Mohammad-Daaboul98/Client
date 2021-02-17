@@ -18,9 +18,9 @@ function App() {
     Axios.get("https://my-note-app-98.herokuapp.com//api/get").then((result) => {
       setNotes(result.data)
     })
-  }, [AddNote]);
+  }, [addNote]);
 
-  function AddNote(newNote) {
+  function addNote(newNote) {
 
     Axios.post("https://my-note-app-98.herokuapp.com//api/insert", {
       title: newNote.title,
@@ -47,7 +47,7 @@ function App() {
   return (
     <div>
       <Header />
-      <CreateArea onAdd={AddNote} />
+      <CreateArea onAdd={addNote} />
       {notes.map((noteItem, index) => {
         return (
           <Note
