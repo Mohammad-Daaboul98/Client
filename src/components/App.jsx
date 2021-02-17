@@ -26,9 +26,7 @@ function App() {
       title: newNote.title,
       content: newNote.content
     }).then("Susccessful insert");
-  
-
-
+ 
     setNotes(prevNotes => {
       return [...prevNotes,newNote];
     });
@@ -37,7 +35,11 @@ function App() {
   function deleteNote(id) {
 
     Axios.delete(`https://my-note-app-98.herokuapp.com/api/delete/${id}`);
-    return notes
+    setNotes(prevNotes => {
+      return prevNotes.filter((noteItem) => {
+        return noteItem._id !== Id;
+      });
+    });
   }
 
   return (
