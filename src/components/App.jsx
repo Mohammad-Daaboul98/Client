@@ -18,7 +18,7 @@ function App() {
     Axios.get("https://my-note-app-98.herokuapp.com//api/get").then((result) => {
       setNotes(result.data)
     })
-  }, [addNote]);
+  }, []);
 
   function addNote(newNote) {
 
@@ -29,9 +29,9 @@ function App() {
   
 
 
-    // setNotes(prevNotes => {
-    //   return [...prevNotes, newNote];
-    // });
+    setNotes(prevNotes => {
+      return [...prevNotes, newNote];
+    });
   }
 
   function deleteNote(id) {
