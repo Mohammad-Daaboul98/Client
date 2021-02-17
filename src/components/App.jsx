@@ -37,7 +37,7 @@ function App() {
   function deleteNote(id) {
 
     Axios.delete(`https://my-note-app-98.herokuapp.com/api/delete/${id}`);
-    return ...notes
+    return notes
   }
 
   return (
